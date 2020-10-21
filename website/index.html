@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Basic websocket server built with Express and Socket.IO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Socket.IO Example</title>
+    <!-- Import the Tailwind CDN -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-red-400 w-screen overflow-x-hidden">
+    <div class="bg-white container w-11/12 lg:w-9/12 p-5 mx-auto min-h-screen">
+        <h1 class="text-3xl mb-5">Basic Socket.IO Example</h1>
+
+        <!-- Form - there's an event listener to send a message to the server in index.js -->
+        <form class="grid gap-2">
+            <label for="name">Enter your name</label>
+            <input class="border-2 border-black rounded" type="text" name="name" id="name" required/>
+            <label for="formBody">Say something</label>
+            <textarea class="border-2 border-black rounded" name="formBody" id="formBody" cols="30" rows="10" required></textarea>
+            <input class="bg-gray-300 border-2 border-gray-700 rounded py-2" type="submit" value="Submit"/>
+        </form>
+
+        <!-- Output goes here -->
+        <div id="output"></div>
+    </div>
+    <!-- Import the socket.io client CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+    <!-- Main script -->
+    <script src="index.js"></script>
+</body>
+</html>
